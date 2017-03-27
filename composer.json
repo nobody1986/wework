@@ -1,0 +1,17 @@
+{
+    "name": "nobody1986/wework",
+    "description": "A PHP SDK for wework development.",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.1",
+        "doctrine/cache": "^1.6"
+    },
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "nobody1986",
+            "email": "as_star@qq.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
