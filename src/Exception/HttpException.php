@@ -1,5 +1,5 @@
 <?php
-namespace Wework\Message;
+namespace Wework\Exception;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -7,10 +7,10 @@ namespace Wework\Message;
  */
 
 /**
- * Description of Message
+ * Description of HttpException
  *
- * @author Administrator
+ * @author nobody1986
  */
-class Message {
-    //put your code here
+class HttpException extends Exception{
+    const ERR_WRONG_METHOD=1;
 }
