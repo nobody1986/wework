@@ -22,7 +22,6 @@ class AccessToken {
     protected $_secret;
     public function __construct() {
      
-        ;
     }
     
     public function auth(){}
