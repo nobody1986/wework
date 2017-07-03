@@ -13,4 +13,6 @@ namespace Wework\Exception;
  */
 class HttpException extends Exception{
     const ERR_WRONG_METHOD=1;
+    const ERR_NETWORK=2;
+    const ERR_TIMEOUT=3;
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 namespace Wework\Http;
@@ -19,7 +18,7 @@ class Client {
     protected static $_httpClient;
 
     const GET = 1;
-    const POST = 1;
+    const POST = 2;
 
     protected static function _getHttpClient() {
         if (!empty(self::$_httpClient)) {
@@ -47,32 +46,22 @@ class Client {
         }
     }
 
-    public static function get($url, $data = []) {
+    public static function getRaw($url, $data = []) {
         return self::_request(self::GET, $url, $data);
     }
 
-    public static function post($url, $data = []) {
+    public static function postRaw($url, $data = []) {
         return self::_request(self::POST, $url, $data);
     }
 
-}
-=======
-<?php
-namespace Wework\Http\Client;
-
-class Client{
-    protected static $_httpClient;
-    protected static function _getHttpClient(){
-        if(!empty($this->_httpClient)){
-            return $this->_httpClient;
-        }
-        $this->_httpClient = new \GuzzleHttp\Client();
-        return $this->_httpClient;
+    public static function getJson($url, $data = []){
+        $ret = self::getRaw($url,$data);
+        return \json_decode($ret,true);
     }
-    protected static function _request($url,$method){
 
+    public static function postJson($url, $data = []){
+        $ret = self::postRaw($url,$data);
+        return \json_decode($ret,true);
     }
-    public static get(){}
-    public static post(){}
+
 }
->>>>>>> fb3ba8fa333103f1198dfc9cbc46fffe81b62df2
